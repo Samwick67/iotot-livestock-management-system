@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AnimalTrack - Smart Livestock Management</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <i class="fa-solid fa-right-to-bracket icon" title="Login" onclick="window.location.href='login.html'"></i>
+    <h1>AnimalTrack</h1>
+    <i class="fa-solid fa-file-chart-line icon" title="Reports" onclick="window.location.href='reports.html'"></i>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Smarter Farming Starts Here 🌱</h2>
+    <p>AnimalTrack brings IoT-powered monitoring to your livestock, ensuring healthier herds and higher productivity.</p>
+    <button class="cta-btn" onclick="window.location.href='login.html'">Get Started</button>
+  </section>
+
+  <!-- Carousel -->
+  <section class="carousel-container">
+    <div class="carousel-item active">
+      <img src="images/heart.jpeg" alt="Monitor HR & Temp">
+      <h3>Monitor Health</h3>
+      <p>Track heart rate and temperature of your livestock in real-time.</p>
+    </div>
+    <div class="carousel-item">
+      <img src="images/motion.jpg" alt="Track Motion">
+      <h3>Track Motion</h3>
+      <p>Detect activity patterns and movement to ensure well-being.</p>
+    </div>
+    <div class="carousel-item">
+      <img src="images/map.jpeg" alt="Live Location">
+      <h3>Live Location</h3>
+      <p>See each animal's position on a live interactive map.</p>
+    </div>
+    <div class="carousel-item">
+      <img src="images/alerts.jpg" alt="Alerts">
+      <h3>Receive Alerts</h3>
+      <p>Get notified instantly if any animal shows abnormal behavior.</p>
+    </div>
+    <div class="dots" id="dotsContainer"></div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2>Why Choose AnimalTrack?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <i class="fa-solid fa-satellite-dish"></i>
+        <h3>IoT Connected</h3>
+        <p>Seamlessly collect real-time data via GPS and sensors.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Data Insights</h3>
+        <p>Get visual reports and detect patterns in herd health.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fa-solid fa-shield-heart"></i>
+        <h3>Animal Welfare</h3>
+        <p>Ensure better care, reduce losses, and maximize profits.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="workflow">
+    <h2>How It Works</h2>
+    <ol>
+      <li><strong>Attach:</strong> Devices are mounted on each animal.</li>
+      <li><strong>Collect:</strong> Sensors transmit HR, Temp, GPS, and activity.</li>
+      <li><strong>Analyze:</strong> Dashboard alerts you to abnormal conditions.</li>
+    </ol>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>Farmers Love AnimalTrack</h2>
+    <div class="testimonial">
+      <p>“Since using AnimalTrack, we’ve reduced cattle losses by 30%. The alerts saved us from a heat stress incident last summer.”</p>
+      <span>- Thabo, Cattle Farmer in KZN</span>
+    </div>
+    <div class="testimonial">
+      <p>“It’s like having a vet in my pocket. I can check on all my animals from my phone.”</p>
+      <span>- Priya, Goat Farmer in Durban</span>
+    </div>
+  </section>
+
+  <!-- Login Button -->
+  <div class="login-container">
+    <button class="login-btn" onclick="window.location.href='login.html'">Login to Dashboard</button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>© 2025 <strong>AnimalTrack</strong>. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#" class="policy-link" data-policy="privacy">Privacy Policy</a> |
+        <a href="#" class="policy-link" data-policy="terms">Terms of Service</a> |
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- Policy Modal -->
+  <div id="policyModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalText">Loading content...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

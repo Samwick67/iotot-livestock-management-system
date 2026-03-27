@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livestock Management Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="livestock.html">Livestock</a>
+    <a href="devices.html">Devices</a>
+    <a href="alerts.html">Alerts</a>
+    <a href="reports.html">Reports</a>
+  </nav>
+
+  <div class="container">
+    <div class="animal-selector">
+      <button id="prevAnimal">&larr;</button>
+      <span id="currentAnimal">Cow1</span>
+      <button id="nextAnimal">&rarr;</button>
+    </div>
+
+    <div class="grid-4">
+      <div class="card">
+        <i class="fa-solid fa-heart-pulse"></i>
+        <h3>Heart Rate</h3>
+        <p id="hr">-- bpm</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-temperature-high"></i>
+        <h3>Temperature</h3>
+        <p id="temp">-- °C</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-compass"></i>
+        <h3>Orientation</h3>
+        <p id="orientation">--</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-person-walking"></i>
+        <h3>Motion</h3>
+        <p id="motion">--</p>
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <i class="fa-solid fa-battery-half"></i>
+        <h3>Battery</h3>
+        <div class="progress"><div id="batteryBar"></div></div>
+        <p id="battery">--%</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-solar-panel"></i>
+        <h3>Solar</h3>
+        <p id="solar">--</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-satellite-dish"></i>
+        <h3>System</h3>
+        <p id="systemStatus"><span style="color:gray;">--</span></p>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>Heart Rate & Temperature Trends</h3>
+        <canvas id="trendChart"></canvas>
+      </div>
+      <div class="card">
+        <h3>Location of Livestock</h3>
+        <div id="map" style="height:300px;"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Telemetry Logs</h3>
+      <ul id="logs"></ul>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
